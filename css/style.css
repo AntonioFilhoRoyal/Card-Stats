@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(233, 47%, 7%);
+
+    font-family: Inter, 'Lexend Deca';
+    font-size: 15px;
+    color: hsl(0, 0%, 100%);
+
+}
+
+    /* FLEXBOX */
+main{
+    margin: 100px auto;
+    width: 75%;
+    height: 60vh;
+    background-color: hsl(244, 38%, 16%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+    /* FLEXBOX dentro do article para separa direitinho as div dos textos */
+main .article-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    /* FLEXBOX dentro da div para alinhar os itens */
+main .article-text .div-text{
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .article-text .div-text h1{
+    font-size: 2em;
+    margin-bottom: 8%;
+}
+
+main .article-text .div-text p{
+    font-size: 14px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+    /* Coloquei um strong na palavra com cor diferente para colocar a cor */
+main .article-text .text-strong{
+    color: hsl(277, 64%, 61%);
+}
+    /* FLEXBOX nos itens por que gosto de flexbox */
+main .article-text .div-itens{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+}
+    /* margin para separa os itenns */
+main .article-text .div-itens div{
+    margin-right: 12%;
+}
+
+main .article-text .div-itens p{
+    margin-top: 5%;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+        /* IMG */
+
+main .section-img{
+    width: 100%;
+}
+
+main .section-img .div-img img{
+    width: 100%;
+    height: 60vh;
+    border-radius: 0px 10px 10px 0px;
+
+}
+    /* Adicionei um before para coloca a cor em cima da img */
+main .section-img .div-img::before{
+    content: " ";
+    background-color: hsla(277, 100%, 33%, 0.487);
+    width: 37.5%;
+    height: 60vh;
+    position: absolute;
+    border-radius: 0px 10px 10px 0px;
+}
+
+    /* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+    main{
+        margin: 70px auto;
+        width: 75%;
+        height: 75vh;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        
+        border-radius: 10px;
+    
+    }
+    
+        /* FLEXBOX dentro da div para alinhar os itens */
+    main .article-text .div-text{
+        margin-top: 10%;
+        margin-bottom: 7%;
+    }
+    
+        /* FLEXBOX nos itens por que gosto de flexbox */
+    main .article-text .div-itens{
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        font-size: 14px;
+    }
+        /* margin para separa os itenns */
+    main .article-text .div-itens div{
+        margin-right: 12%;
+        margin-bottom: 5%;
+    }
+    
+            /* IMG */
+    
+    main .section-img{
+        width: 100%;
+    }
+    
+    main .section-img .div-img img{
+        width: 100%;
+        height: 30vh;
+        border-radius: 10px 10px 0px 0px;
+    
+    }
+        /* Adicionei um before para coloca a cor em cima da img */
+    main .section-img .div-img::before{
+        content: " ";
+        background-color: hsla(277, 100%, 33%, 0.487);
+        width: 75%;
+        height: 30vh;
+        position: absolute;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+
+@media (max-width: 550px) {
+        /* margin para separa os itenns */
+    main .article-text .div-itens div{
+        margin-right: 12%;
+        margin-bottom: 10%;
+    }
+ 
+}
+
+@media (max-width: 400px) {
+    main{
+        margin: 70px auto;
+        width: 75%;
+        height: 85vh;
+    
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        
+        border-radius: 10px;
+    
+    }
+    
+        /* FLEXBOX dentro da div para alinhar os itens */
+    main .article-text .div-text{
+        width: 80%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+    main .article-text .div-text h1{
+        font-size: 1.4em;
+        margin-bottom: 8%;
+    }
+
+    main .article-text .div-text p{
+        font-size: 12px;
+    }
+    
+        /* FLEXBOX nos itens por que gosto de flexbox */
+    main .article-text .div-itens{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+    }
+        /* margin para separa os itenns */
+    main .article-text .div-itens div{
+        margin-bottom: 12%;
+        text-align: center;
+    }
+    
+            /* IMG */
+    
+    main .section-img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    main .section-img .div-img img{
+        width: 100%;
+        height: 25vh;
+        border-radius: 10px 10px 0px 0px;
+    
+    }
+        /* Adicionei um before para coloca a cor em cima da img */
+    main .section-img .div-img::before{
+        content: " ";
+        background-color: hsla(277, 100%, 33%, 0.487);
+        width: 75%;
+        height: 25vh;
+        position: absolute;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
